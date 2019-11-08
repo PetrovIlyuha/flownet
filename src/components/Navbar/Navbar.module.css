@@ -2,7 +2,7 @@
   grid-area: n;
   background: #c6ffdd;
   background: -webkit-linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
-  background: linear-gradient(to top, #c6ffdd, #fbd786, #f7797d);
+  background: linear-gradient(to bottom, #0F2027, #203A43, #f7797d);
   height: 600px;
   border-radius: 20px;
   padding: 20px;
@@ -25,6 +25,6 @@
   color: red;
 }
 
-.active {
+.item a.active {
   color: gold;
 }

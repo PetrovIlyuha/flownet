@@ -2,7 +2,7 @@
   grid-area: h;
   height: 90px;
   border-radius: 20px;
-  background: linear-gradient(to right, #1a2980, #26d0ce);
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   position: relative;
 }
 
@@ -19,5 +19,5 @@
   margin-right: 20px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2rem;
-  color: rgb(46, 10, 131);
+  color: lightcoral;
 }
