@@ -22,9 +22,11 @@ const Dialogs = (props) => {
   let dialogsData = [
     {id: 1, name: "John Mitchell"},
     {id: 2, name: "Veronica Marvel"},
-    {id: 3, name: "Vilhelm Reich"},
+    {id: 3, name: "Donald Knuth"},
     {id: 4, name: "Matt Damon"},
   ];
+
+  let dialogsElements = dialogsData.map(dialog => <DialogItem name={dialog.name} key={dialog.id} id={dialog.id}/>);
 
   let messagesData = [
     {id: 1, message: "What's new in React?"},
@@ -32,21 +34,16 @@ const Dialogs = (props) => {
     {id: 3, message: "While I am still on lifecycle methods and REDUX"},
   ];
 
+  let messagesElements = messagesData
+        .map(message => <Message message={message.message} key={message.id} id={message.id}/>);
+
   return (
     <div className={s.dialogs}>
       <div className={s.dialogsItems}>
-        {dialogsData.map(dialog => {
-          return (
-            <DialogItem name={dialog.name} key={dialog.id} id={dialog.id}/>
-          )
-        })}
+        {dialogsElements}
       </div>
       <div className={s.messages}>
-        {messagesData.map(message => {
-          return (
-            <Message message={message.message} key={message.id} id={message.id}/>
-          )
-        })}
+        {messagesElements}
       </div>
     </div>
   )

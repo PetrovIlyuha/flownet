@@ -15,6 +15,16 @@ const MyPosts = () => {
       id:2,
       message: 'It\'s moving under my skin...',
       likesCount: 11
+    },
+    {
+      id:3,
+      message: 'Doesn\'t it scares you?',
+      likesCount: 122
+    },
+    {
+      id:4,
+      message: 'Not really it\'s a tradeoff',
+      likesCount: 3
     }
   ];
 
