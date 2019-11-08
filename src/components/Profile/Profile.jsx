@@ -1,14 +1,12 @@
 import React from "react";
-import hero from "../../assets/hero.jpg";
-import s from "./Profile.module.css";
 import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 export default function Content() {
   return (
     <div>
       <div>
-        <img src={hero} alt="hero banner" />
-        <div>Ava + Description</div>
+        <ProfileInfo/>
         <MyPosts />
       </div>
     </div>

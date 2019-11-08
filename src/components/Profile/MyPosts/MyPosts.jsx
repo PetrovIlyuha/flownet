@@ -3,18 +3,45 @@ import React from "react";
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
-export default function MyPosts() {
+const MyPosts = () => {
+
+  let postData = [
+    {
+      id:1,
+      message: 'How is progress in Front-End self-education?',
+      likesCount: 14
+    },
+    {
+      id:2,
+      message: 'It\'s moving under my skin...',
+      likesCount: 11
+    }
+  ];
+
   return (
-    <div>
-      My Posts
+    <div className={s.postsBlock}>
+      <h3>
+        My Posts
+      </h3>
       <div>
-        <textarea></textarea>
-        <button>Add Post</button>
+        <div>
+          <textarea></textarea>
+        </div>
+        <div>
+          <button>Add Post</button>
+        </div>
       </div>
       <div className={s.posts}>
-        <Post message="Hope it will be fine" likeCount="4" />
-        <Post message="Sure it will" likeCount="5" />
+        {
+          postData.map(post => {
+            return (
+              <Post key={post.id} message={post.message} likesCount={post.likesCount}/>
+            )
+          })
+        }
       </div>
     </div>
   );
-}
+};
+
+export default MyPosts;

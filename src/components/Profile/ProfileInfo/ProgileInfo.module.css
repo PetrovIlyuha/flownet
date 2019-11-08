@@ -1,0 +1,9 @@
+.descriptionBlock {
+    padding: 10px;
+}
+
+.hero {
+    border-radius: 10px;
+    box-shadow: 9px 10px 5px -4px darkred;
+    margin: 0 auto;
+}
