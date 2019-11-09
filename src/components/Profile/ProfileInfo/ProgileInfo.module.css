@@ -1,9 +1,16 @@
-.descriptionBlock {
-    padding: 10px;
+.profileBlock {
+  display: flex;
+  flex-direction: column;
 }
 
-.hero {
-    border-radius: 10px;
-    box-shadow: 9px 10px 5px -4px darkred;
-    margin: 0 auto;
+.hero .banner {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 9px 10px 5px -4px darkred;
+  justify-content: center;
+}
+
+.descriptionBlock {
+  padding: 10px;
+  align-content: flex-start;
 }

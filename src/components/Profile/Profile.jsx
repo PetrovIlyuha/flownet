@@ -1,14 +1,17 @@
 import React from "react";
 import MyPosts from "./MyPosts/MyPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import s from "./Profile.module.css";
 
-export default function Content() {
+const Content = (props) => {
   return (
     <div>
-      <div>
-        <ProfileInfo/>
-        <MyPosts />
+      <div className={s.profileFlex}>
+        <ProfileInfo />
+        <MyPosts posts={props.posts}/>
       </div>
     </div>
   );
 }
+
+export default Content;
