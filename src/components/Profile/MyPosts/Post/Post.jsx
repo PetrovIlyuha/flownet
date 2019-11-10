@@ -2,6 +2,7 @@ import React from "react";
 import userPhoto from "../../../../assets/userAvatar.png";
 import s from "./Post.module.css";
 
+
 const Post = props => {
   return (
     <div className={s.item}>
@@ -19,5 +20,7 @@ const Post = props => {
     </div>
   );
 };
-
 export default Post;
+
+
+
