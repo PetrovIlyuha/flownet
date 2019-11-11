@@ -7,11 +7,11 @@ const Content = (props) => {
   return (
     <div>
       <div className={s.profileFlex}>
-        <ProfileInfo />
+        <ProfileInfo/>
         <MyPosts posts={props.state.posts}/>
       </div>
     </div>
   );
-}
+};
 
 export default Content;

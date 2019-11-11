@@ -1,8 +1,9 @@
 import React from "react";
 import s from "./Navbar.module.css";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-export default function Navbar() {
+const Navbar = (props) => {
+  const friends = props.state.friends;
   return (
     <div>
       <nav className={s.nav}>
@@ -21,7 +22,23 @@ export default function Navbar() {
         <div className={s.item}>
           <NavLink to="/settings" activeClassName={s.active}>Settings</NavLink>
         </div>
+        <div className={s.friends}>
+          {friends.map(friend => {
+            return (
+              <div key={friend.friendId} className={s.friend}>
+                <img
+                  src={require(`../../assets/friend${friend.friendId}.jpg`)}
+                  alt=""
+                  crossOrigin="anonymous"
+                />
+                <span>{friend.name}</span>
+              </div>
+            );
+          })}
+        </div>
       </nav>
     </div>
   );
-}
+};
+
+export default Navbar;

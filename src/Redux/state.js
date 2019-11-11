@@ -1,3 +1,7 @@
+// import friend1 from "../assets/friend0.jpg";
+// import friend2 from "../assets/friend1.jpg";
+// import friend3 from "../assets/friend2.jpg";
+
 let state = {
   messagesPage: {
     messages: [
@@ -36,6 +40,22 @@ let state = {
       }
     ]
 
+  },
+  sidebar: {
+    friends: [
+      {
+        friendId: 0,
+        name: "Andy Sterkowitz"
+      },
+      {
+        friendId: 1,
+        name: "Ashley Bee"
+      },
+      {
+        friendId: 2,
+        name: "Florence Marriott"
+      }
+    ]
   }
 };
 
