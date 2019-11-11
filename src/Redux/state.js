@@ -1,6 +1,7 @@
 // import friend1 from "../assets/friend0.jpg";
 // import friend2 from "../assets/friend1.jpg";
 // import friend3 from "../assets/friend2.jpg";
+import { rerenderEntireTree } from "../render";
 
 let state = {
   messagesPage: {
@@ -57,6 +58,16 @@ let state = {
       }
     ]
   }
+};
+
+export let addPost = (postMessage) => {
+  let newPost = {
+    id: 5,
+    message: postMessage,
+    likesCount: 0
+  };
+  state.profilePage.posts.push(newPost);
+  rerenderEntireTree(state);
 };
 
 export default state;

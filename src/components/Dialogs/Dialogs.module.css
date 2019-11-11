@@ -18,3 +18,23 @@
     margin-bottom: 10px;
     color: white;
 }
+
+.messageBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sendMessage {
+    border: 2px solid silver;
+    outline: none;
+    background-color: darkslateblue;
+    color: #c6ffdd;
+}
+.sendBtn {
+    color: lightcoral;
+    background-color: #0f0c29;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+}

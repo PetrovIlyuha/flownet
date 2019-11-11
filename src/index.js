@@ -1,12 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import { rerenderEntireTree } from "./render";
+import state from "./Redux/state";
 
-import state from './Redux/state';
-import { BrowserRouter } from "react-router-dom";
-
-ReactDOM.render(
-  <BrowserRouter>
-    <App state={state}/>
-  </BrowserRouter>
-  , document.getElementById("root"));
+rerenderEntireTree(state);
