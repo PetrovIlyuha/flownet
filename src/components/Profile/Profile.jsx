@@ -8,7 +8,11 @@ const Content = (props) => {
     <div>
       <div className={s.profileFlex}>
         <ProfileInfo/>
-        <MyPosts posts={props.state.posts} addPost={props.addPost}/>
+        <MyPosts
+          posts={props.profilePage.posts}
+          newPostText={props.profilePage.newPostText}
+          updateNewPostText={props.updateNewPostText}
+          addPost={props.addPost}/>
       </div>
     </div>
   );

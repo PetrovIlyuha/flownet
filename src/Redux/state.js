@@ -1,6 +1,3 @@
-// import friend1 from "../assets/friend0.jpg";
-// import friend2 from "../assets/friend1.jpg";
-// import friend3 from "../assets/friend2.jpg";
 import { rerenderEntireTree } from "../render";
 
 let state = {
@@ -15,7 +12,8 @@ let state = {
       { id: 2, name: "Veronica Marvel" },
       { id: 3, name: "Donald Knuth" },
       { id: 4, name: "Matt Damon" }
-    ]
+    ],
+    newMessageText: '',
   },
   profilePage: {
     posts: [
@@ -39,8 +37,8 @@ let state = {
         message: "Not really it's a tradeoff",
         likesCount: 3
       }
-    ]
-
+    ],
+    newPostText: ''
   },
   sidebar: {
     friends: [
@@ -60,13 +58,36 @@ let state = {
   }
 };
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
   let newPost = {
-    id: 5,
-    message: postMessage,
+    id: Math.random()
+      .toString(36)
+      .substr(2, 6),
+    message: state.profilePage.newPostText,
     likesCount: 0
   };
   state.profilePage.posts.push(newPost);
+  rerenderEntireTree(state);
+};
+
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
+  rerenderEntireTree(state);
+};
+
+export let addMessage = () => {
+  let newMessage = {
+    id: Math.random()
+      .toString(36)
+      .substr(2, 6),
+    message: state.messagesPage.newMessageText
+  };
+  state.messagesPage.messages.push(newMessage);
+  rerenderEntireTree(state);
+};
+
+export let updateNewMessageText = (newText) => {
+  state.messagesPage.newMessageText = newText;
   rerenderEntireTree(state);
 };
 
