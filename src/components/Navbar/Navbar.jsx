@@ -3,7 +3,7 @@ import s from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
 
 const Navbar = (props) => {
-  const friends = props.state.friends;
+  const friends = props.state.sidebar.friends;
   return (
     <div>
       <nav className={s.nav}>

@@ -3,29 +3,26 @@ import s from "./Dialogs.module.css";
 import DialogItem from "../Dialogs/DialogItem/DialogItem";
 import Message from "./Message/Message";
 
-
-
-
 const Dialogs = props => {
   console.log(props);
-  let dialogsElements = props.state.dialogs.map(dialog => (
+  let dialogsElements = props.state.messagesPage.dialogs.map(dialog => (
     <DialogItem name={dialog.name} key={dialog.id} id={dialog.id}/>
   ));
 
-  let messagesElements = props.state.messages.map(message => (
+  let messagesElements = props.state.messagesPage.messages.map(message => (
     <Message message={message.message} key={message.id} id={message.id}/>
   ));
 
   let newMessageElement = React.createRef();
 
   const addMessage = () => {
-    props.addMessage();
-    props.updateNewMessageText('');
+    props.store.addMessage();
+    props.store.updateNewMessageText('');
   };
 
   let onMessageChange = () => {
     let text = newMessageElement.current.value;
-    props.updateNewMessageText(text);
+    props.store.updateNewMessageText(text);
   };
   return (
     <>
