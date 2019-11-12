@@ -11,8 +11,7 @@ const Content = (props) => {
         <MyPosts
           posts={props.state.profilePage.posts}
           newPostText={props.state.profilePage.newPostText}
-          updateNewPostText={props.store.updateNewPostText.bind(props.store)}
-          addPost={props.store.addPost.bind(props.store)}/>
+          dispatch={props.dispatch}/>
       </div>
     </div>
   );
