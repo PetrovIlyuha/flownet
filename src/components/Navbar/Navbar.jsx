@@ -6,7 +6,6 @@ import UseAnimations from 'react-useanimations';
 const Navbar = (props) => {
   const friends = props.state.sidebar.friends;
   return (
-
     <div>
       <nav className={s.nav}>
         <div className={`${s.item} ${s.active}`}>
@@ -43,7 +42,7 @@ const Navbar = (props) => {
             );
           })}
         </div>
-      </nav>
+      </nav>s
     </div>
   );
 };
