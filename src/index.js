@@ -1,4 +1,4 @@
-import store from "./Redux/state";
+import store from "./Redux/store";
 import React from "react";
 import { render } from "react-dom";
 import App from "./App";
@@ -16,7 +16,6 @@ let rerenderEntireTree = (state) => {
     </BrowserRouter>
     , document.getElementById("root"));
 };
-
 
 rerenderEntireTree(store.getState());
 
