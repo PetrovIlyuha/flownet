@@ -20,12 +20,12 @@
     padding: 0 15px;
     margin-top: 20px;
     font-size: 15px;
-    color: white;
     text-decoration: none;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
     border: 2px solid;
     border-radius: 7px;
     outline: 0;
+    color: yellow;
     -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
     box-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
     background: #3471b8;
@@ -78,6 +78,7 @@
 
 .addPostBtn:active {
     background: #3d79c8;
+    color: darkkhaki;
     background-image: -webkit-linear-gradient(top, #216298 0%, #3774c4 60%, #3d79c8 100%);
     background-image: -moz-linear-gradient(top, #216298 0%, #3774c4 60%, #3d79c8 100%);
     background-image: -o-linear-gradient(top, #216298 0%, #3774c4 60%, #3d79c8 100%);
