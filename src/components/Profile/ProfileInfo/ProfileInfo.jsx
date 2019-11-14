@@ -3,7 +3,7 @@ import hero from "../../../assets/dunesreact.jpg";
 import s from "./ProgileInfo.module.css";
 import Avatar from "react-avatar";
 
-const ProfileInfo = props => {
+const ProfileInfo = () => {
   return (
     <div className={s.profileBlock}>
       <div className={s.hero}>

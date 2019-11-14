@@ -4,14 +4,12 @@ import s from "./Profile.module.css";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 
-const Content = (props) => {
+const Content = () => {
   return (
     <div>
       <div className={s.profileFlex}>
         <ProfileInfo/>
-        <MyPostsContainer
-          store={props.store}
-        />
+        <MyPostsContainer/>
       </div>
     </div>
   );
