@@ -3,6 +3,7 @@ import s from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
 import UseAnimations from "react-useanimations";
 import Provider from "../../storeContext";
+import { connect } from "react-redux";
 
 const Navbar = () => {
  return (
@@ -29,32 +30,34 @@ const Navbar = () => {
           <NavLink to="/settings" activeClassName={s.active}>Settings</NavLink>
         </div>
         <div className={s.friends}>
-          <Provider.Consumer>
-            {
-              (store) => {
-                let state = store.getState();
-                 return (
-                    state.sidebar.friends.map(friend => {
-                      return (
-                        <div key={friend.friendId} className={s.friend}>
-                          <img
-                            src={require(`../../assets/friend${friend.friendId}.jpg`)}
-                            alt=""
-                            crossOrigin="anonymous"
-                          />
-                          <div>{friend.name}</div>
-                        </div>
-                      );
-                    }
-                  )
-                );
-              }
-            }
-          </Provider.Consumer>
+          {/*<Provider.Consumer>*/}
+          {/*  {*/}
+          {/*    (store) => {*/}
+          {/*      let state = store.getState();*/}
+          {/*       return (*/}
+          {/*          state.sidebar.friends.map(friend => {*/}
+          {/*            return (*/}
+          {/*              <div key={friend.friendId} className={s.friend}>*/}
+          {/*                <img*/}
+          {/*                  src={require(`../../assets/friend${friend.friendId}.jpg`)}*/}
+          {/*                  alt=""*/}
+          {/*                  crossOrigin="anonymous"*/}
+          {/*                />*/}
+          {/*                <div>{friend.name}</div>*/}
+          {/*              </div>*/}
+          {/*            );*/}
+          {/*          }*/}
+          {/*        )*/}
+          {/*      );*/}
+          {/*    }*/}
+          {/*  }*/}
+          {/*</Provider.Consumer>*/}
         </div>
       </nav>
     </div>
   );
 };
 
-export default Navbar;
+const SuperNavbar = connect()(Navbar);
+
+export default SuperNavbar;

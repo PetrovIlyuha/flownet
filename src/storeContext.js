@@ -1,13 +1,13 @@
 import React from 'react';
 
-const StoreContext = React.createContext(null);
+React.createContext(null);
 
-export const Provider = (props) => {
+
+const StoreContext = () => {
   return (
-    <StoreContext.Provider value={props.value}>
-      {props.children}
-    </StoreContext.Provider>
-  );
+    <div>
+      H1
+    </div>
+  )
 };
-
 export default StoreContext;
