@@ -11,6 +11,12 @@
 }
 
 .descriptionBlock {
+  display: flex;
   padding: 10px;
-  align-content: flex-start;
+  flex-direction: column;
+  align-content: center;
+}
+
+.personalInfo {
+    color: #c6ffdd;
 }

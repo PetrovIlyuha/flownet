@@ -2,26 +2,26 @@ import React from "react";
 import s from "./Dialogs.module.css";
 import DialogItem from "../Dialogs/DialogItem/DialogItem";
 import Message from "./Message/Message";
-import { updateNewMessageBodyActionCreator, sendMessageCreator } from "../../Redux/dialogsReducer";
 
 const Dialogs = props => {
-  let dialogsElements = props.state.dialogsPage.dialogs.map(dialog => (
+  let state = props.dialogsPage;
+  let dialogsElements = state.dialogs.map(dialog => (
     <DialogItem name={dialog.name} key={dialog.id} id={dialog.id}/>
   ));
 
-  let messagesElements = props.state.dialogsPage.messages.map(message => (
+  let messagesElements = state.messages.map(message => (
     <Message message={message.message} key={message.id} id={message.id}/>
   ));
 
 
   const addMessage = () => {
-    props.dispatch(sendMessageCreator());
-    props.dispatch(updateNewMessageBodyActionCreator());
+    props.sendMessage();
+    props.updateNewMessageBody();
   };
 
   let onMessageChange = (e) => {
     let text = e.target.value;
-    props.dispatch(updateNewMessageBodyActionCreator(text));
+    props.updateNewMessageBody(text);
   };
   return (
     <>
@@ -37,7 +37,7 @@ const Dialogs = props => {
           rows="3"
           onChange={onMessageChange}
           className={s.sendMessage}
-          value={props.state.dialogsPage.newMessageText}
+          value={state.newMessageText}
         ></textarea>
         <button
           className={s.sendBtn}

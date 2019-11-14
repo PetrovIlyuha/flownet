@@ -42,7 +42,7 @@ const Navbar = (props) => {
             );
           })}
         </div>
-      </nav>s
+      </nav>
     </div>
   );
 };
