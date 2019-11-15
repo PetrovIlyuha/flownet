@@ -6,9 +6,10 @@
 .dialogsItems {
     padding: 10px;
     text-decoration: none;
+    color: #0f0c29;
 }
 
-.dialog .active {
+.dialogItems .active {
     color: lightgoldenrodyellow;
 }
 .messages {

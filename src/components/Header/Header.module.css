@@ -2,8 +2,9 @@
   grid-area: h;
   height: 90px;
   border-radius: 20px;
-  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  background: linear-gradient(to right, #0f0c29, #2a0845, #6441A5);
   position: relative;
+  margin: 10px 20px 0 20px;
 }
 
 .header img {
@@ -20,4 +21,7 @@
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2rem;
   color: lightcoral;
+  position: absolute;
+  right: 1%;
+  top: 25%;
 }

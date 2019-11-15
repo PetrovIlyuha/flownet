@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from 'react-dom';
 import store from "./Redux/redux-store";
 import App from "./App";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux';

@@ -1,0 +1,27 @@
+.users {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.userContainer {
+    display: grid;
+    background-color: lightgrey;
+    justify-content: space-between;
+    grid-template-areas:
+     'avatar avatar status'
+     'name name country'
+     'follow-button follow-button city';
+    grid-gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 450px;
+}
+
+.avatar {grid-area: avatar;}
+.name {grid-area: name}
+.status {grid-area: status}
+.country {grid-area: country}
+.city {grid-area: city}
+
+

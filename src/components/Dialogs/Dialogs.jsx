@@ -6,7 +6,7 @@ import Message from "./Message/Message";
 const Dialogs = props => {
   let state = props.dialogsPage;
   let dialogsElements = state.dialogs.map(dialog => (
-    <DialogItem name={dialog.name} key={dialog.id} id={dialog.id}/>
+    <DialogItem name={dialog.name} key={dialog.id} id={dialog.id} className={s.dialogsItems}/>
   ));
 
   let messagesElements = state.messages.map(message => (
@@ -37,7 +37,7 @@ const Dialogs = props => {
           rows="3"
           onChange={onMessageChange}
           className={s.sendMessage}
-          value={state.newMessageText}
+          value={state.newMessageBody}
         ></textarea>
         <button
           className={s.sendBtn}
