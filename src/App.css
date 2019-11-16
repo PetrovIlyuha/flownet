@@ -1,6 +1,5 @@
 .app-wrapper {
     display: grid;
-
     grid-template-areas: "h h" "n c";
     grid-template-rows: 60px 1fr;
     grid-template-columns: 2fr 10fr;
@@ -12,6 +11,6 @@
     background: linear-gradient(to right,#BA5370,#F4E2D8 );
     border-radius: 20px;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-right: 20px;
 }

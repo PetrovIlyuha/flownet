@@ -1,27 +1,28 @@
 .header {
-  grid-area: h;
-  height: 90px;
-  border-radius: 20px;
-  background: linear-gradient(to right, #0f0c29, #2a0845, #6441A5);
-  position: relative;
-  margin: 10px 20px 0 20px;
+    grid-area: h;
+    height: 90px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #0f0c29, #2a0845, #6441A5);
+    position: relative;
+    margin: 10px 20px 0 20px;
+    box-shadow: 1px 5px 17px -1px rgba(14, 10, 48, 1);
 }
 
 .header img {
-  width: 60px;
-  position: absolute;
-  left: 20px;
-  top: 15px;
-  border-radius: 50%;
+    width: 60px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    border-radius: 50%;
 }
 
 .logo {
-  float: right;
-  margin-right: 20px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 2rem;
-  color: lightcoral;
-  position: absolute;
-  right: 1%;
-  top: 25%;
+    float: right;
+    margin-right: 20px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 2rem;
+    color: lightcoral;
+    position: absolute;
+    right: 1%;
+    top: 25%;
 }

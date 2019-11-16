@@ -3,14 +3,16 @@
     background: #c6ffdd;
     background: -webkit-linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
     background: linear-gradient(to bottom, #0F2027, #203A43, #f7797d);
+    box-shadow: 5px 6px 14px 1px rgba(99,88,92,1);
     height: 550px;
     border-radius: 20px;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-left: 20px;
+    width: 100px;
 }
 
 .item {

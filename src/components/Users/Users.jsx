@@ -5,19 +5,16 @@ import * as axios from "axios";
 import userPhoto from "../../assets/friend0.jpg";
 
 class Users extends React.Component {
+  componentDidMount() {
+    axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
+      this.props.setUsers(response.data.items);
+    });
+  }
 
-  getUsers = () => {
-    if (this.props.users.length === 0) {
-      axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-        this.props.setUsers(response.data.items);
-      });
-    }
-  };
 
   render() {
     return (
       <div className={s.users}>
-        <Button outline color="primary" onClick={this.getUsers}>Get Users</Button>
         {
           this.props.users.map(user => {
             return (
@@ -49,9 +46,10 @@ class Users extends React.Component {
           })
         }
       </div>
-    )
+    );
   }
 
 }
+
 
 export default Users;
