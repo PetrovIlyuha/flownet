@@ -10,28 +10,40 @@ const Navbar = () => {
     <div>
       <nav className={s.nav}>
         <div className={`${s.item} ${s.active}`}>
-          <UseAnimations animationKey="github"/>
-          <NavLink to="/profile" activeClassName={s.active}>Profile</NavLink>
+          <NavLink to="/profile" activeClassName={s.active}>
+            <UseAnimations animationKey="github" className={s.animation}/>
+            Profile
+          </NavLink>
         </div>
         <div className={s.item}>
-          <UseAnimations animationKey="twitter"/>
-          <NavLink to="/dialogs" activeClassName={s.active}>Messages</NavLink>
+          <NavLink to="/dialogs" activeClassName={s.active}>
+            <UseAnimations animationKey="twitter" className={s.animation}/>
+            Messages
+          </NavLink>
         </div>
         <div className={s.item}>
-          <UseAnimations animationKey="archive"/>
-          <NavLink to="/users" activeClassName={s.active}>Users</NavLink>
+          <NavLink to="/users" activeClassName={s.active}>
+            <UseAnimations animationKey="archive" className={s.animation}/>
+            Users
+          </NavLink>
         </div>
         <div className={s.item}>
-          <UseAnimations animationKey="bookmark"/>
-          <NavLink to="/news" activeClassName={s.active}>News</NavLink>
+          <NavLink to="/news" activeClassName={s.active}>
+            <UseAnimations animationKey="bookmark" className={s.animation}/>
+            News
+          </NavLink>
         </div>
         <div className={s.item}>
-          <UseAnimations animationKey="playPauseCircle"/>
-          <NavLink to="/music" activeClassName={s.active}>Music</NavLink>
+          <NavLink to="/music" activeClassName={s.active}>
+            <UseAnimations animationKey="playPauseCircle" className={s.animation}/>
+            Music
+          </NavLink>
         </div>
         <div className={s.item}>
-          <UseAnimations animationKey="settings2"/>
-          <NavLink to="/settings" activeClassName={s.active}>Settings</NavLink>
+          <NavLink to="/settings" activeClassName={s.active}>
+            <UseAnimations animationKey="settings2" className={s.animation}/>
+            Settings
+          </NavLink>
         </div>
         <FriendList store={store}/>
       </nav>
