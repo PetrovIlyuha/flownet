@@ -26,4 +26,9 @@
 .country {grid-area: country}
 .city {grid-area: city}
 
-
+.selectedPage {
+    font-weight: bold;
+}
+.pagination {
+    text-align: center;
+}

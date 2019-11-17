@@ -3,41 +3,10 @@ const UNFOLLOW = "UNFOLLOW";
 const SET_USERS = "SET_USERS";
 
 let initialState = {
-  users: [
-    // {
-    //   id: 1,
-    //   photoUrl: require("../assets/friend0.jpg"),
-    //   followed: false,
-    //   fullName: "Bob Marley",
-    //   status: "Singer",
-    //   location: {
-    //     city: "Minneapolis",
-    //     country: "USA"
-    //     }
-    // },
-    // {
-    //   id: 2,
-    //   photoUrl: require("../assets/friend1.jpg"),
-    //   followed: true,
-    //   fullName: "Ricky Martin",
-    //   status: "Singer",
-    //   location: {
-    //     city: "Calcutta",
-    //     country: "India"
-    //   }
-    // },
-    // {
-    //   id: 3,
-    //   followed: false,
-    //   photoUrl: require("../assets/friend2.jpg"),
-    //   fullName: "Vladimir Putin",
-    //   status: "President",
-    //   location: {
-    //     city: "Moscow",
-    //     country: "Russia"
-    //   }
-    // }
-  ]
+  users: [],
+  pageSize: 5,
+  totalUsersCount: 20,
+  currentPage: 1
 };
 
 const usersReducer = (state = initialState, action ) => {
