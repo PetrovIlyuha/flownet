@@ -1,6 +1,9 @@
 .users {
     margin-top: 10px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .userContainer {
@@ -28,7 +31,7 @@
 
 .selectedPage {
     font-weight: bold;
+    color: white;
+    background-color: #0f0c29;
 }
-.pagination {
-    text-align: center;
-}
+
