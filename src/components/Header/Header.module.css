@@ -14,6 +14,12 @@
     left: 20px;
     top: 15px;
     border-radius: 50%;
+    transition: transform .8s ease-in-out;
+}
+
+.header img:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 
 .logo {
@@ -26,3 +32,5 @@
     right: 1%;
     top: 25%;
 }
+
+

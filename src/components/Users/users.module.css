@@ -35,3 +35,7 @@
     background-color: #0f0c29;
 }
 
+.spinner {
+    border-radius: 50%;
+    width: 100px;
+}
