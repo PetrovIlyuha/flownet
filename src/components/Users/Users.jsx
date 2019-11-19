@@ -3,7 +3,8 @@ import s from "./users.module.css";
 import { Button } from "reactstrap";
 import userPhoto from "../../assets/friend0.jpg";
 import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import {NavLink} from "react-router-dom";
 
 const Users = (props) => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -20,7 +21,7 @@ const Users = (props) => {
               <PaginationLink
                 className={props.currentPage === page && s.selectedPage}
                 onClick={(e) => {
-                  props.onPageChanged(page)
+                  props.onPageChanged(page);
                 }}
               >{page}
               </PaginationLink>
@@ -32,13 +33,15 @@ const Users = (props) => {
         props.users.map(user => {
           return (
             <div key={user.id} className={s.userContainer}>
-              <div className={s.avatar}>
-                <img
-                  src={user.photos.small !== null ? user.photos.small : userPhoto}
-                  alt="user photography"
-                  style={{ width: "70px", borderRadius: "50%", border: "3px solid palegreen" }}
-                />
-              </div>
+              <NavLink to={'/profile/' + user.id}>
+                <div className={s.avatar}>
+                  <img
+                    src={user.photos.small !== null ? user.photos.small : userPhoto}
+                    alt="user photography"
+                    style={{ width: "70px", borderRadius: "50%", border: "3px solid palegreen" }}
+                  />
+                </div>
+              </NavLink>
               <div>
                 {
                   user.followed
@@ -59,7 +62,7 @@ const Users = (props) => {
         })
       }
     </div>
-  )
+  );
 };
 
 export default Users;
@@ -72,7 +75,7 @@ Users.propTypes = {
   size: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   listTag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  'aria-label': PropTypes.string
+  "aria-label": PropTypes.string
 };
 
 Users.propTypes = {
@@ -81,7 +84,7 @@ Users.propTypes = {
   className: PropTypes.string,
   cssModule: PropTypes.object,
   disabled: PropTypes.bool,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
 };
 
 Users.propTypes = {
@@ -93,5 +96,5 @@ Users.propTypes = {
   first: PropTypes.bool,
   last: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  'aria-label': PropTypes.string
+  "aria-label": PropTypes.string
 };

@@ -1,20 +1,30 @@
-.profileBlock {
-  display: flex;
-  flex-direction: column;
-}
 
 .descriptionBlock {
-  display: flex;
-  padding: 10px;
-  flex-direction: column;
-  align-content: center;
+  display: grid;
+  grid-template-areas:
+  "avatar avatar avatar job-looking"
+  "full-name full-name full-name job-description"
+  "about-me about-me about-me job-description"
+  "contacts contacts contacts contacts"
+;
+ grid-gap: 20px;
+ background: linear-gradient(to left,#BA5370,#F4E2D8);
+ border-radius: 20px;
 }
 
-.personalInfo {
+.contactList > *a {
     color: #c6ffdd;
 }
 
-.carouselFlex {
+.contactList {
     display: flex;
-    align-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
+
+.avatar { grid-area: avatar; border: 2px solid palegreen;}
+.aboutMe { color: #c6ffdd; grid-area: about-me;}
+.fullName { grid-area: full-name;}
+.contactList { grid-area: contacts; color: #c6ffdd;}
+.jobLook { grid-area: job-looking;}
+.lookingJobDescription { grid-area: job-description;}
