@@ -8,7 +8,6 @@ import NonJobLooking from '../../../assets/job_looking_false.png';
 
 
 const ProfileInfo = (props) => {
-  console.log(props);
   if (!props.profile) {
     return <Preloader/>;
   }
@@ -28,19 +27,15 @@ const ProfileInfo = (props) => {
         <div className={s.contactList}>
           <a href={`${props.profile.contacts.facebook}`}>
             <UseAnimations animationKey="facebook" className={s.animation}/>
-            {props.profile.contacts.facebook}
           </a>
           <a href={`${props.profile.contacts.github}`}>
             <UseAnimations animationKey="github" className={s.animation}/>
-            {props.profile.contacts.github}
           </a>
           <a href={`${props.profile.contacts.instagram}`}>
             <UseAnimations animationKey="instagram" className={s.animation}/>
-            {props.profile.contacts.instagram}
           </a>
           <a href={`${props.profile.contacts.twitter}`}>
             <UseAnimations animationKey="twitter" className={s.animation}/>
-            {props.profile.contacts.twitter}
           </a>
         </div>
         <div className={s.jobLook}>
@@ -49,7 +44,11 @@ const ProfileInfo = (props) => {
             :
             <img src={NonJobLooking} alt="not searching for job"/>}
         </div>
-        <div className={s.lookingJobDescription}>{props.profile.lookingForAJobDescription}</div>
+        <div className={s.lookingJobDescription}>
+          <div>
+            Job Title
+          </div>
+          {props.profile.lookingForAJobDescription}</div>
       </div>
     </div>
   );
