@@ -22,6 +22,30 @@
     transform: rotate(360deg);
 }
 
+.loginBlock {
+    float: right;
+    position: absolute;
+    right: 30%;
+    top: 25%;
+    margin-right: 20px;
+}
+
+.login {
+    color: #c6ffdd;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-underline-mode: none;
+}
+.login:hover {
+    color: lightsalmon;
+}
+.logout {
+    color: #fbd786;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-underline-mode: none;
+}
+
 .logo {
     float: right;
     margin-right: 20px;
