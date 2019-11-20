@@ -1,6 +1,5 @@
 import React from "react";
 import s from "./users.module.css";
-import { Button } from "reactstrap";
 import userPhoto from "../../assets/friend0.jpg";
 import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
 import PropTypes from "prop-types";
@@ -46,22 +45,26 @@ const Users = (props) => {
               <div>
                 {
                   user.followed
-                    ? <Button color="warning" onClick={() => {
+                    ? <button disabled={props.followingInProgress.some(id => id === user.id)}  onClick={() => {
+                      props.toggleFollowingProgress(true, user.id);
                       unfollowAPI.unfollowUser(user.id)
                         .then(data => {
                           if (data.resultCode === 0) {
                             props.unfollow(user.id);
                           }
                         });
-                    }}>Unfollow</Button>
-                    : <Button outline color="secondary" onClick={() => {
+                      props.toggleFollowingProgress(false, user.id);
+                    }}>Unfollow</button>
+                    : <button disabled={props.followingInProgress.some(id => id === user.id)} onClick={() => {
+                      props.toggleFollowingProgress(true, user.id);
                       followAPI.followUser(user.id)
                         .then(data => {
                           if (data.resultCode === 0) {
                             props.follow(user.id);
                           }
                         });
-                    }}>Follow</Button>
+                      props.toggleFollowingProgress(false, user.id);
+                    }}>Follow</button>
                 }
               </div>
               <div className={s.name}>{user.name}</div>
@@ -90,7 +93,7 @@ Users.propTypes = {
 };
 
 Users.propTypes = {
-  active: PropTypes.bool,
+  active: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
   cssModule: PropTypes.object,
@@ -102,10 +105,10 @@ Users.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  next: PropTypes.bool,
-  previous: PropTypes.bool,
-  first: PropTypes.bool,
-  last: PropTypes.bool,
+  next: PropTypes.string,
+  previous: PropTypes.string,
+  first: PropTypes.string,
+  last: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   "aria-label": PropTypes.string
 };
