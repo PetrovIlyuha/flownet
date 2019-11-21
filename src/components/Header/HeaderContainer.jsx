@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "./Header";
-import * as axios from "axios";
 import { connect } from "react-redux";
 import { setAuthUserData } from "../../Redux/authReducer";
 import { authAPI } from "../../api/api";
@@ -8,11 +7,11 @@ import { authAPI } from "../../api/api";
 class HeaderContainer extends React.Component {
   componentDidMount() {
     authAPI.authorizeMe()
-      .then(data => {
-        if (data.resultCode === 0) {
-          let {id, email, login} = data.data;
+      .then(response => {
+        if (response.data.resultCode === 0) {
+          let {id, email, login} = response.data.data;
           this.props.setAuthUserData(id, email, login);
-        }
+        } 
       });
   }
 
