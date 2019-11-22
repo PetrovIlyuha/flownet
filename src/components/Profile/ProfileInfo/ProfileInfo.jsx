@@ -5,6 +5,7 @@ import Preloader from "../../Common/Preloader/preloader";
 import UseAnimations from "react-useanimations";
 import JobLooking from '../../../assets/job_looking_true.png';
 import NonJobLooking from '../../../assets/job_looking_false.png';
+import ProfileStatus from "../ProfileStatus";
 
 
 const ProfileInfo = (props) => {
@@ -13,6 +14,7 @@ const ProfileInfo = (props) => {
   }
   return (
     <div className={s.profileBlock}>
+      <ProfileStatus status="working"/>
       <div className={s.descriptionBlock}>
         <Avatar className={s.avatar}
           src={props.profile.photos.large}
