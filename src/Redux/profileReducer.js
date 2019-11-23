@@ -29,7 +29,7 @@ let initialState = {
     }
   ],
   newPostText: "",
-  profile: null,
+  profile: "",
   status: ""
 };
 
