@@ -46,3 +46,9 @@ export const authAPI = {
     return instance.get(`auth/me`);
   }
 };
+
+export const loginAPI = {
+  loginMe() {
+    return instance.post(`auth/login`)
+  }
+};
