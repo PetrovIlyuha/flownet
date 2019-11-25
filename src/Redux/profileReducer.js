@@ -27,7 +27,6 @@ let initialState = {
       likesCount: 3
     }
   ],
-  newPostText: "",
   profile: "",
   status: ""
 };
@@ -40,7 +39,7 @@ const profileReducer = (state = initialState, action) => {
         id: Math.random()
           .toString(36)
           .substr(2, 6),
-        message: action.newPost,
+        message: action.newPostText,
         likesCount: 0
       };
      return {
@@ -66,7 +65,7 @@ const profileReducer = (state = initialState, action) => {
 };
 
 // Action Creators
-export const addPostActionCreator = (newPost) => ({type: ADD_POST, newPost});
+export const addPostActionCreator = (newPostText) => ({type: ADD_POST, newPostText});
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 export const setStatus = (status) => ({type: SET_STATUS, status});
 
