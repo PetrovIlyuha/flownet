@@ -8,3 +8,11 @@
 {
     color: red;
 }
+
+.formSummaryError {
+    border: 1px solid palevioletred;
+    color: #D63301;
+    background-color: #FFCCBA;
+    border-radius: 5px;
+    width: 180px;
+}
