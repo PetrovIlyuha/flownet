@@ -9,9 +9,9 @@ import { compose } from 'redux';
 class ProfileContainer extends React.Component {
   componentDidMount() {
     let userId = this.props.match.params.userId;
+    console.log(userId);
     if (!userId) {
-      debugger;
-      this.props.getUserProfile("5235");
+      userId = 3872;
     }
     this.props.getUserProfile(userId);
     this.props.getStatus(userId);
