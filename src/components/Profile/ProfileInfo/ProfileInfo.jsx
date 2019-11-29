@@ -2,7 +2,7 @@ import React from "react";
 import s from "./ProgileInfo.module.css";
 import Avatar from "react-avatar";
 import Preloader from "../../Common/Preloader/preloader";
-import UseAnimations from "react-useanimations";
+// import UseAnimations from "react-useanimations";
 import JobLooking from '../../../assets/job_looking_true.png';
 import NonJobLooking from '../../../assets/job_looking_false.png';
 // import ProfileStatus from "../ProfileStatus";
@@ -30,16 +30,16 @@ const ProfileInfo = (props) => {
         </div>
         <div className={s.contactList}>
           <a href={`${props.profile.contacts.facebook}`}>
-            <UseAnimations animationKey="facebook" className={s.animation}/>
+            {/*<UseAnimations animationKey="facebook" className={s.animation}/>*/}
           </a>
           <a href={`${props.profile.contacts.github}`}>
-            <UseAnimations animationKey="github" className={s.animation}/>
+            {/*<UseAnimations animationKey="github" className={s.animation}/>*/}
           </a>
           <a href={`${props.profile.contacts.instagram}`}>
-            <UseAnimations animationKey="instagram" className={s.animation}/>
+            {/*<UseAnimations animationKey="instagram" className={s.animation}/>*/}
           </a>
           <a href={`${props.profile.contacts.twitter}`}>
-            <UseAnimations animationKey="twitter" className={s.animation}/>
+            {/*<UseAnimations animationKey="twitter" className={s.animation}/>*/}
           </a>
         </div>
         <div className={s.jobLook}>
