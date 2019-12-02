@@ -1,0 +1,47 @@
+.selectedPage {
+    font-weight: bold;
+    color: white;
+    background-color: #0f0c29;
+}
+
+.users {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.userContainer {
+    display: grid;
+    background-color: lightgrey;
+    justify-content: space-between;
+    grid-template-areas:
+            'avatar avatar status'
+            'name name country'
+            'follow-button follow-button city';
+    grid-gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 450px;
+    border: 2px solid palevioletred;
+    box-shadow: 4px 6px 11px -6px rgba(23,20,23,1);
+}
+
+.avatar {grid-area: avatar;}
+.name {grid-area: name}
+.status {grid-area: status}
+.country {grid-area: country}
+.city {grid-area: city}
+
+.selectedPage {
+    font-weight: bold;
+    color: white;
+    background-color: #0f0c29;
+}
+
+.spinner {
+    border-radius: 50%;
+    width: 100px;
+}
