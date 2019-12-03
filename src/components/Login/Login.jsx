@@ -35,7 +35,7 @@ const Login = props => {
     return <Redirect to={"/profile/1234"}/>
   }
   return (
-    <div>
+    <div className={style.loginForm}>
       <h1>Login</h1>
       <LoginReduxForm onSubmit={onSubmit}/>
     </div>

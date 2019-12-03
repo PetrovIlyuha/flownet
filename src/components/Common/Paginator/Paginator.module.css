@@ -12,6 +12,10 @@
     align-items: flex-start;
 }
 
+.changeBtn {
+    background-color: #0f0c29;
+    color: yellowgreen;
+}
 .userContainer {
     display: grid;
     background-color: lightgrey;
@@ -36,8 +40,8 @@
 .city {grid-area: city}
 
 .pages {
-    color: white;
-    margin-left: 2px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .selectedPage {

@@ -1,79 +1,38 @@
-import React, { useState } from 'react';
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption
-} from 'reactstrap';
+import React, { Component } from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import CarouselImg1 from '../../../assets/carousel1.jpg';
+import CarouselImg2 from '../../../assets/carousel2.jpg';
+import CarouselImg3 from '../../../assets/carousel3.jpg';
 
-const items = [
-  {
-    src: require("../../../assets/carousel1.jpg"),
-    caption: 'Prepare for the future'
-  },
-  {
-    src: require("../../../assets/carousel2.jpg"),
-    caption: 'Be curious'
-  },
-  {
-    src: require("../../../assets/carousel3.jpg"),
-    caption: 'Don\'t get bored'
-  }
-];
-
-const CarouselProfile = (props) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [animating, setAnimating] = useState(false);
-
-  const next = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-    setActiveIndex(nextIndex);
-  };
-
-  const previous = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-    setActiveIndex(nextIndex);
-  };
-
-  const goToIndex = (newIndex) => {
-    if (animating) return;
-    setActiveIndex(newIndex);
-  };
-
-  const slides = items.map((item) => {
+class ProfileCarousel extends Component {
+  render() {
     return (
-      <CarouselItem style={{margin: "0 auto"}}
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
+      <Carousel
+        a
+        showThumbs={false}
+        infiniteLoop={true}
+        dynamicHeight={true}
+        width={400}
+        interval={2000}
+        stopOnHover={true}
+        showStatus={false}
       >
-        <img
-          src={item.src}
-          alt={item.altText}
-          className="d-block w-100"
-          style={{borderRadius: "20px", border: "3px solid #5a6e8f"}}
-         />
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
-      </CarouselItem>
+        <div>
+          <img src={CarouselImg1} alt="some" />
+          <p className="legend">Technology is optimism</p>
+        </div>
+        <div>
+          <img src={CarouselImg2} alt="connections"/>
+          <p className="legend">More Human Touch</p>
+        </div>
+        <div>
+          <img src={CarouselImg3} alt="cityview"/>
+          <p className="legend">Fortunate to have You</p>
+        </div>
+      </Carousel>
     );
-  });
+  }
+}
 
-  return (
-    <Carousel
-      activeIndex={activeIndex}
-      next={next}
-      previous={previous}
-    >
-      <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-      {slides}
-      <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-      <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-    </Carousel>
-  );
-};
-
-export default CarouselProfile;
-
+export default ProfileCarousel;

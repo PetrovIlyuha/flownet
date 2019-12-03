@@ -15,9 +15,12 @@ const FormControl = ({ input, meta: {touched, error}, children, ...props }) => {
 };
 
 export const Input = (props) => {
-  const { input, meta, child, ...otherProps } = props;
+  const { input, meta, child, name, ...otherProps } = props;
   return (
-    <FormControl {...props}><input {...props.input} {...otherProps}/></FormControl>
+    <FormControl {...props}>
+      <input {...props.input} {...otherProps} className={styles.inputField}/>
+      <label htmlFor={name}>{props.name}</label>
+    </FormControl>
   );
 };
 

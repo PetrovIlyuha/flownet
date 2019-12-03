@@ -2,13 +2,13 @@ import React from "react";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import s from "./Profile.module.css";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
-// import CarouselProfile from "./ProfileInfo/CarouselProfile";
+import ProfileCarousel from "./ProfileInfo/CarouselProfile";
 
 
 const Profile = (props) => {
   return (
-    <div>
-      {/*<CarouselProfile/>*/}
+    <div className={s.carouselAndProfile}>
+      <ProfileCarousel/>
       <div className={s.profileContainer}>
         <ProfileInfo
             profile={props.profile}
