@@ -11,6 +11,7 @@ const Paginator = ({currentPage, totalUsersCount, pageSize, onPageChanged, ...pr
     <div className={s.users}>
         {pages.map(page => {
           return (
+            <div className={s.pages}>
               <span
                 className={currentPage === page && s.selectedPage}
                 onClick={(e) => {
@@ -18,6 +19,7 @@ const Paginator = ({currentPage, totalUsersCount, pageSize, onPageChanged, ...pr
                 }}
               >{page}
               </span>
+            </div>
           );
         })}
     </div>

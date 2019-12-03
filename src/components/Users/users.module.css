@@ -8,7 +8,7 @@
 
 .userContainer {
     display: grid;
-    background-color: lightgrey;
+    background-color: #ff8906;
     justify-content: space-between;
     grid-template-areas:
      'avatar avatar status'
@@ -20,7 +20,6 @@
     margin-top: 10px;
     width: 450px;
     border: 2px solid palevioletred;
-    box-shadow: 4px 6px 11px -6px rgba(23,20,23,1);
 }
 
 .avatar {grid-area: avatar;}
@@ -38,4 +37,40 @@
 .spinner {
     border-radius: 50%;
     width: 100px;
+}
+
+.followBtn {
+    background-color: #f25f4c;
+    color: #fffffe;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 3px solid black;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.followBtn:hover {
+    background-color: #e53170;
+}
+
+.unfollowBtn {
+    background: #e53170;
+    color: #fffffe;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 3px solid black;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.unfollowBtn:hover {
+    background-color: #f25f4c;
 }

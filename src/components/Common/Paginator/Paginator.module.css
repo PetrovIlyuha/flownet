@@ -35,9 +35,14 @@
 .country {grid-area: country}
 .city {grid-area: city}
 
+.pages {
+    color: white;
+    margin-left: 2px;
+}
+
 .selectedPage {
     font-weight: bold;
-    color: white;
+    color: gold;
     background-color: #0f0c29;
 }
 

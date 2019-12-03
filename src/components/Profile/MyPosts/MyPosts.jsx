@@ -40,7 +40,7 @@ const MyPosts = React.memo((props) => {
 
   return (
     <div className={s.postsBlock}>
-      <h3>
+      <h3 className={s.postsHeader}>
         My Posts
       </h3>
       <AddPostReduxForm onSubmit={addNewPost}/>
