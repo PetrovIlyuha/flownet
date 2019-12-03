@@ -22,5 +22,20 @@ describe("ProfileStatus Component", () => {
     let span = root.findByType("span");
     expect(span.children[0]).toBe("Network");
   });
+  test("input should be displayed in editMode instead of span", () => {
+    const component = create(<ProfileStatus status="Network"/>);
+    const root = component.root;
+    let span = root.findByType("span");
+    span.props.onDoubleClick();
+    let input = root.findByType("input");
+    expect(input.props.value).toBe("Network");
+  });
+  test("callback should be passed and called", () => {
+    const mockCallback = jest.fn();
+    const component = create(<ProfileStatus status="Network" updateStatus={mockCallback}/>);
+    const instance = component.getInstance();
+    instance.deactivateEditMode();
+    expect(mockCallback.mock.calls.length).toBe(1);
+  });
   }
 );
