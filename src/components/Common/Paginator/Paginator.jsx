@@ -30,7 +30,7 @@ const Paginator = ({
           return (
             <div className={s.pages}>
               <button
-                className={currentPage === page && s.selectedPage}
+                className={currentPage === page ? s.selectedPage : ""}
                 onClick={(e) => {
                   onPageChanged(page);
                 }}

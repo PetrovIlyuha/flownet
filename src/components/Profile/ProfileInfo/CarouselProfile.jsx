@@ -9,11 +9,11 @@ class ProfileCarousel extends Component {
   render() {
     return (
       <Carousel
-        a
+
         showThumbs={false}
         infiniteLoop={true}
         dynamicHeight={true}
-        width={400}
+        width={"400px"}
         interval={2000}
         stopOnHover={true}
         showStatus={false}
